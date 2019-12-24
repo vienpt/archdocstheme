@@ -80,6 +80,16 @@
                 </li>
               </ul>
             </nav>
+            <nav>
+              <ul class="lg:flex items-center justify-between text-base text-black pt-4 lg:pt-0">
+                <li>
+                  <router-link
+                    class="lg:p-4 py-3 px-0 block hover:border-indigo-400"
+                    to="/admin"
+                  >Admin</router-link>
+                </li>
+              </ul>
+            </nav>
             <!-- <a
               href="#"
               class="lg:ml-4 flex items-center justify-start lg:mb-0 mb-4 pointer-cursor"
