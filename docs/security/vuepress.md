@@ -3,7 +3,6 @@ title: Vuepress
 description: This tutorial how to authenticate Vuepress by using Azure Active Directory.
 titleBorder: true
 ---
-
 ### Setting Authentication
 
 [Preapare Azure AD](azuread.md)
@@ -18,9 +17,7 @@ To use Azure AD in your Vuepress application, you will need the [`adal`](https:/
 npm install adal-angular
 ```
 
-::: warning
-adal.js has implemented by implicit flow [Implicit Grant](README.md). [Read more](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Login-methods)
-:::
+::: warning adal.js has implemented by implicit flow [Implicit Grant](README.md). [Read more](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Login-methods) :::
 
 > Note: If the local development server is still running, you can press CTRL+C to stop it.
 
@@ -79,7 +76,7 @@ Then export default function. You use router to navigation your app before acces
 
 Now start your local dev server with `yarn dev` and view `http://localhost:5000`
 
-![azuread_login](~@assets/image/azuread_login.png)
+![azuread_login](/docs/.vuepress/dist/assets/img/azuread_implicitgrant.png)
 
 after login
 
