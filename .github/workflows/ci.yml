@@ -68,10 +68,10 @@ jobs:
 
     # deploy
       
-    #- name: Azure CLI script
-    #  uses: azure/CLI@v1
-    #  with:
-    #    azcliversion: latest
-    #    inlineScript: |
-    #      az storage blob delete-batch -s "\$web" --connection-string DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net
-    #      az storage blob upload-batch -d "\$web" -s ${{ env.OUTPUT_PATH }} --connection-string DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net
+    - name: Azure CLI script
+      uses: azure/CLI@v1
+      with:
+        azcliversion: latest
+        inlineScript: |
+          az storage blob delete-batch -s "\$web/${GITHUB_SHA}" --connection-string "DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net"
+          az storage blob upload-batch -d "\$web/${GITHUB_SHA}" -s ${{ env.OUTPUT_PATH }} --connection-string "DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net"
