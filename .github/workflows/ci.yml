@@ -44,7 +44,6 @@ jobs:
     - name: Check artifact
       run: |
         ls -la
-        ls -la /public
         cat .output
 
     # deploy
