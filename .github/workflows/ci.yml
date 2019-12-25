@@ -7,8 +7,8 @@ on:
       - master
 
 # set up env
-env:
-  OUTPUT_PATH: ${{ github.workspace }}/public
+#env:
+#  OUTPUT_PATH: ${{ github.workspace }}/public
 
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
     # build docs
 
     - name: Yarn build
-      run: yarn docs:build --dest ${{ env.OUTPUT_PATH }}
+      run: yarn docs:build --dest public
 
     # Publish
 
@@ -39,19 +39,19 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         name: website
-        path: ${{ env.OUTPUT_PATH }}
+        path: public
     
     - name: Check artifact
       run: |
         ls -la
         ls -la public
-        ls -la ${{ env.OUTPUT_PATH }}
+      #  ls -la ${{ env.OUTPUT_PATH }}
         
     - name: Download artifact /public folder
       uses: actions/download-artifact@v1
       with:
           name: website
-          path: ${{ env.OUTPUT_PATH }}
+          path: public
 
     # deploy
       

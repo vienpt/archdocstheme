@@ -2,14 +2,14 @@
 
 詳細な設計になると、アプリケーションのアーキテクチャを設計し、モデルと展開の依存関係を簡単に作成できるツールを使用します。For example, our services implemented on Single-Page web applications.
 
-![spa_development](~@assets/image/architecture_development_spa.png)
+![spa_development](/images/architecture_development_spa.png)
 
 ## Use cases
 
 また、詳細な計画の一部として、ユースケース、コンポーネントの依存関係および相互接続図を設計し、データベーススキーマをモデル化するために使用できます。
 たとえば、図4はastah Professionalのユースケース図を示しています。
 
-<img src="~@assets/image/architec_Design_Modeling.png" width="" height=""/><br />
+<img src="/images/architec_Design_Modeling.png" width="" height=""/><br />
 
 **図4**ユースケース図
 
@@ -22,7 +22,7 @@
 
 Creating RESTful services, also known as as web APIs, using [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-3.1). To create a web API, reference [docs here](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio). For example, Figure 5 shows architecture for backend side.
 
-![serverside](~@assets/image/architec_design_model_backend_.png)
+![serverside](/images/architec_design_model_backend_.png)
 
 **Figure 5**. Application layer architecture for backend
 
@@ -32,7 +32,7 @@ The most web application is using modern single page application [(SPA)](https:/
 
 [Vuejs](https://vuejs.org) is a progressive framework for building user interfaces. Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects.
 
-<!-- <img src="~@assets/image/architec_design_model_backend_.png" width="" height=""/><br />
+<!-- <img src="/images/architec_design_model_backend_.png" width="" height=""/><br />
 
 **図5**バックエンドのアプリケーション層アーキテクチャ
 
@@ -42,7 +42,7 @@ Webアプリケーションのセキュリティは、アプリケーション�
 
 ### Web APIの保護
 
-<img src="~@assets/image/architect_design_security.png" width="" height=""/><br />
+<img src="/images/architect_design_security.png" width="" height=""/><br />
 
 **図5-1**Web APIのトークンベースの認証
 

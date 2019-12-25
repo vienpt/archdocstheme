@@ -10,7 +10,7 @@ Authentication and authorization are two related words that are often used inter
 
 `Authorization` is a process of giving a user permission to access a specific resources(s) or function(s).
 
-![Auth](~@assets/image/security_auth.jpeg)
+![Auth](/images/security_auth.jpeg)
 
 **Figure 5-1**. Authentication and Authorization.
 
@@ -30,6 +30,6 @@ ASP.NET Core Identity allow secure web APIs and SPAs, use one of the following:
 
 [Example](https://github.com/aspnet/AspNetCore.Docs/tree/master/aspnetcore/security/authentication/identity/sample)
 
-![Auth](~@assets/image/architect_design_security.png)
+![Auth](/images/architect_design_security.png)
 
 **Figure 5-2**. Token-based authentication for Web APIs.

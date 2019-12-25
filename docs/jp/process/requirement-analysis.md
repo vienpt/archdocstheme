@@ -5,7 +5,7 @@
 要件分析は最初の段階です。要件はドキュメントおよびダイアグラムとして提供させます。
 
 要件を収集して分析するには、Microsoft Excel、PowerPoint、XMindなどのツールとアプリケーションを使用して、この初期段階で目標、計画時間、および開発プロジェクトのコストを定義します。 たとえば、図2は、顧客の要件の分析後に定義する目標を示しています。
-<img src="~@assets/image/plan_analysis_defininggoal.png" alt="drawing" width="" height=""/><br />
+<img src="/images/plan_analysis_defininggoal.png" alt="drawing" width="" height=""/><br />
 
 **図2**. ゴール定義  
 
@@ -13,6 +13,6 @@
 
 <br />
 
-<img src="~@assets/image/planning_analysis.png" alt="drawing" width="" height=""/><br />
+<img src="/images/planning_analysis.png" alt="drawing" width="" height=""/><br />
 
 **図3**. プロセス計画

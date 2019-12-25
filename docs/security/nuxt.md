@@ -8,7 +8,7 @@ In Nuxtjs application, that's separate [directory structure](https://nuxtjs.org/
 
 This schema shows what is called by Nuxt.js when the server is called or when the user navigates through the app via `<nuxt-link>`:
 
-![nuxtschema](~@assets/image/nuxtschema.png)
+![nuxtschema](/images/nuxtschema.png)
 
 ## Section Nuxt with Azure AD :star:
 

@@ -9,6 +9,6 @@ An important task is [`documenting`](https://veinz.netlify.com/learn/demoday_270
 
 Maintaining and enhancing software to cope with newly discovered problems or new requirements can take far more time than the initial development of the software.
 
-<img src="~@assets/image/release.png" width="" height=""/><br />
+<img src="/images/release.png" width="" height=""/><br />
 
 **Figure 9**. Releases epic

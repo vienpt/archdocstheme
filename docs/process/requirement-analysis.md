@@ -8,7 +8,7 @@ Requirements analysis is the first stage. The requirements may be provided as do
 
 To collect and analyze requirements we can use tools and applications such as Microsoft Excel, PowerPoint, and XMind for defining goals, planning times and costing development projects at this initial stage. For example, Figure 2 shows the goal of defining after analysis of the Customer's requirement.
 
-<img src="~@assets/image/plan_analysis_defininggoal.png" alt="drawing" width="" height=""/><br />
+<img src="/images/plan_analysis_defininggoal.png" alt="drawing" width="" height=""/><br />
 
 **Figure 2**. Goal defining  
 
@@ -16,6 +16,6 @@ From goal defining we can break down to the story, pick it up to implement, and 
 
 <br />
 
-<img src="~@assets/image/planning_analysis.png" alt="drawing" width="" height=""/><br />
+<img src="/images/planning_analysis.png" alt="drawing" width="" height=""/><br />
 
 **Figure 3**. Project planning

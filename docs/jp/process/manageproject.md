@@ -6,12 +6,12 @@
 
 ストーリーには時間の概算と完了情報を含めることができるため、個々のワーカーとマネージャーの両方がプロジェクト開発サイクルの状態を一目で確認できます。 たとえば、図7は、実装する1週間の計画とタスクを示しています。
 
-<img src="~@assets/image/manageproject_story.png" width="" height=""/><br />
+<img src="/images/manageproject_story.png" width="" height=""/><br />
 
 **図7** タスクの計画と追跡
 
 ソフトウェアの品質を監視することは、開発プロセスの段階の1つです。 図8は、Sprintのストーリーの一部を示しています。
 
-<img src="~@assets/image/manageproject_report.png" width="" height=""/><br />
+<img src="/images/manageproject_report.png" width="" height=""/><br />
 
 **図8** スプリント報告

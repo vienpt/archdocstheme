@@ -19,7 +19,7 @@
 **`Archway`** ではAgileモデルに基づいてソフトウェアを作成しますが、プロセスを定義および実行するためのカスタマイズがあり、開発者チームの成功を支援することに重点を置いています。
 <br />
 
-<img src="~@assets/image/development_processes.png" alt="drawing" width="462" height=""/><br />
+<img src="/images/development_processes.png" alt="drawing" width="462" height=""/><br />
 
 **図1**. ソフトウェア開発ライフサイクル
 

@@ -6,6 +6,6 @@ SDLCのリリースフェーズ（「デプロイ」とも呼ばれる）では�
 
 ソフトウェアの保守と強化には、新たに発見された問題や新しい要件で予定より時間がかかる場合を対処します。
 
-<img src="~@assets/image/release.png" width="" height=""/><br />
+<img src="/images/release.png" width="" height=""/><br />
 
 **図9**. リリースエピック

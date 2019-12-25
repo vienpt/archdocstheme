@@ -8,12 +8,12 @@ titleBorder: true
 
 The stories can include time approximations and completion information so that both individual workers and managers can see at a glance the state of the project development cycle. For example, Figure 7 shows the plans and tasks for a week to implement.
 
-<img src="~@assets/image/manageproject_story.png" width="" height=""/><br />
+<img src="/images/manageproject_story.png" width="" height=""/><br />
 
 **Figure 7**. Plans and track tasks
 
 Monitoring the quality of the software is one of the stage of the development process. Figure 8 show some of the Sprint stories.
 
-<img src="~@assets/image/manageproject_report.png" width="" height=""/><br />
+<img src="/images/manageproject_report.png" width="" height=""/><br />
 
 **Figure 8**. Sprint Report

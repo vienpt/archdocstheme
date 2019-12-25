@@ -12,7 +12,7 @@ In **`Archway`** we create a software base on agile model but have some customiz
 
 <br />
 
-<img src="~@assets/image/development_processes.png" alt="drawing" width="462" height=""/><br />
+<img src="/images/development_processes.png" alt="drawing" width="462" height=""/><br />
 
 **Figure 1**. The software development life cycle
 
