@@ -73,5 +73,5 @@ jobs:
       with:
         azcliversion: latest
         inlineScript: |
-          az storage blob delete-batch -s '\$web' --connection-string 'DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net'
-          az storage blob upload-batch -d '\$web' -s ${{ env.OUTPUT_PATH }} --connection-string 'DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net'
+          az storage blob delete-batch -s \$web --connection-string "DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net"
+          az storage blob upload-batch -s ${{ env.OUTPUT_PATH }} -d \$web  --connection-string "DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net"
