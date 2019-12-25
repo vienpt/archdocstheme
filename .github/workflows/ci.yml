@@ -51,11 +51,11 @@ jobs:
         ls -la
         ls -la .output
 
-    - name: Azure Login
-      uses: Azure/login@v1
-      with:
+    #- name: Azure Login
+    #  uses: Azure/login@v1
+    #  with:
         # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    #    creds: ${{ secrets.AZURE_CREDENTIALS }}
         
     - name: Download artifact
       uses: actions/download-artifact@v1
@@ -63,8 +63,8 @@ jobs:
           name: website
           path: ${{ env.OUTPUT_PATH }}
           
-    - name: Deploy to Azure Storage
-      run: az storage blob upload-batch --source ${{ env.OUTPUT_PATH }} --destination \$web/${GITHUB_SHA} --account-name reviewarchdocsdesign
+    #- name: Deploy to Azure Storage
+    #  run: az storage blob upload-batch --source ${{ env.OUTPUT_PATH }} --destination \$web/${GITHUB_SHA} --account-name reviewarchdocsdesign
 
     # deploy
       
