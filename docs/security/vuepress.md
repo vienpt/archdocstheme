@@ -80,4 +80,4 @@ Now start your local dev server with `yarn dev` and view `http://localhost:5000`
 
 after login
 
-![archdocapp](/assets/img/archdocapp.png)
+![archdocapp](/assets/img/find-jobs.jpg)
