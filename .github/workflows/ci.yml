@@ -1,4 +1,4 @@
-name: CI
+name: Build and deploy archdocstheme to Azure Storage
 
 # set up branch to CI
 on:
@@ -8,7 +8,7 @@ on:
 
 # set up env
 env:
-  OUTPUT_PATH: ${{ github.workspace }}/public
+  OUTPUT_PATH: ${{ github.workspace }}/.output
 
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
     # build docs
 
     - name: Yarn build
-      run: yarn deploy_public
+      run: yarn docs:build --dest ${{ env.OUTPUT_PATH }}
 
     # Publish
 
@@ -44,12 +44,14 @@ jobs:
     - name: Check artifact
       run: |
         ls -la
+        ls -la /public
+        cat .output
 
     # deploy
       
-    - name: Azure CLI script
-      uses: azure/CLI@v1
-      with:
-        azcliversion: latest
-        inlineScript: |
-          az account show
+    # - name: Azure CLI script
+    #   uses: azure/CLI@v1
+    #   with:
+    #     azcliversion: latest
+    #     inlineScript: |
+    #       az account show
