@@ -49,8 +49,8 @@ jobs:
     - name: Check artifact
       run: |
         ls -la
-        ls -la /public
-        ls -la /${{ env.OUTPUT_PATH }}
+        ls -la public
+        ls -la ${{ env.OUTPUT_PATH }}
 
     #- name: Azure Login
     #  uses: Azure/login@v1
