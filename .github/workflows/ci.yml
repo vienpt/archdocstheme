@@ -9,7 +9,6 @@ on:
 # set up env
 env:
   OUTPUT_PATH: ${{ github.workspace }}/public
-  AZURE_STORAGE_CONNECTION_STRING: "DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net"
 
 jobs:
   build:
@@ -56,10 +55,12 @@ jobs:
 
     # deploy
       
-    - name: Azure CLI script
+    - name: Deploy by Azure CLI
+      env:
+        AZURE_STORAGE_CONNECTION_STRING: "DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net"
       uses: azure/CLI@v1
       with:
         azcliversion: latest
         inlineScript: |
-          az storage blob delete-batch -s \$web --connection-string ${{ env.AZURE_STORAGE_CONNECTION_STRING }}
-          az storage blob upload-batch -d \$web -s ${{ env.OUTPUT_PATH }} --connection-string ${{ env.AZURE_STORAGE_CONNECTION_STRING }}
+          az storage blob delete-batch -s \$web --connection-string $AZURE_STORAGE_CONNECTION_STRING
+          az storage blob upload-batch -d \$web -s ${{ env.OUTPUT_PATH }} --connection-string $AZURE_STORAGE_CONNECTION_STRING
