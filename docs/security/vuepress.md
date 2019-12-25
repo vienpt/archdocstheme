@@ -76,7 +76,7 @@ Then export default function. You use router to navigation your app before acces
 
 Now start your local dev server with `yarn dev` and view `http://localhost:5000`
 
-![azuread_login](/docs/.vuepress/dist/assets/img/azuread_implicitgrant.png)
+![azuread_login](/assets/img/azuread_login.png)
 
 after login
 
