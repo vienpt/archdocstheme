@@ -1,6 +1,14 @@
 name: CI
 
-on: [push]
+# set up branch to CI
+on:
+  push:
+    branches:
+      - master
+
+# set up env
+env:
+  OUTPUT_PATH: ${{ github.workspace }}/public
 
 jobs:
   build:
@@ -15,9 +23,33 @@ jobs:
         node-version: '10.x'
         registry-url: 'https://registry.npmjs.org'
 
+    # install package
+
     - name: Install Dependencies
       run: yarn install
 
+    # build docs
+
     - name: Yarn build
-      run: yarn docs:build
+      run: yarn deploy_public
+
+    # Publish
+
+    - name: Publish website output
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: website
+        path: ${{ env.OUTPUT_PATH }}
     
+    - name: Check artifact
+      run: |
+        ls -la
+
+    # deploy
+      
+    - name: Azure CLI script
+      uses: azure/CLI@v1
+      with:
+        azcliversion: latest
+        inlineScript: |
+          az account show
