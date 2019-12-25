@@ -33,7 +33,7 @@ module.exports = {
    */
   themeConfig: {
     base: "/",
-    dest: "public",
+    dest: process.env.deploy_public,
     lastUpdated: "Last Updated",
     smoothScroll: true,
     search: true,

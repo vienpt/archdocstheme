@@ -83,10 +83,10 @@
             <nav>
               <ul class="lg:flex items-center justify-between text-base text-black pt-4 lg:pt-0">
                 <li>
-                  <router-link
+                  <a
                     class="lg:p-4 py-3 px-0 block hover:border-indigo-400"
-                    to="/admin"
-                  >Admin</router-link>
+                    href="/admin/"
+                  >Admin</a>
                 </li>
               </ul>
             </nav>

@@ -10,7 +10,8 @@
   "repository": "/Archway documentation",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "deploy_public": "vuepress build docs --dest public"
   },
   "license": "MIT",
   "devDependencies": {
