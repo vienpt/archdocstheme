@@ -51,12 +51,27 @@ jobs:
         ls -la
         ls -la .output
 
+    - name: Azure Login
+      uses: Azure/login@v1
+      with:
+        # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        
+    - name: Download artifact
+      uses: actions/download-artifact@v1
+      with:
+          name: website
+          path: ${{ env.OUTPUT_PATH }}
+          
+    - name: Deploy to Azure Storage
+      run: az storage blob upload-batch --source ${{ env.OUTPUT_PATH }} --destination \$web/${GITHUB_SHA} --account-name reviewarchdocsdesign
+
     # deploy
       
-    - name: Azure CLI script
-      uses: azure/CLI@v1
-      with:
-        azcliversion: latest
-        inlineScript: |
-          az storage blob delete-batch -s "\$web" --connection-string DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net
-          az storage blob upload-batch -d "\$web" -s ${{ env.OUTPUT_PATH }} --connection-string DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net
+    #- name: Azure CLI script
+    #  uses: azure/CLI@v1
+    #  with:
+    #    azcliversion: latest
+    #    inlineScript: |
+    #      az storage blob delete-batch -s "\$web" --connection-string DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net
+    #      az storage blob upload-batch -d "\$web" -s ${{ env.OUTPUT_PATH }} --connection-string DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net
