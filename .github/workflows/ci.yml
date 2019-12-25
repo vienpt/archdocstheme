@@ -8,7 +8,7 @@ on:
 
 # set up env
 env:
-  OUTPUT_PATH: ${{ github.workspace }}/.output # SOURCE_DIR: "./public"
+  OUTPUT_PATH: ${{ github.workspace }}/public # SOURCE_DIR: "./public"
   AZURE_CLIENT_ID: "772aba2e-3cd3-49ad-9aba-b957ba645f03"
   AZURE_TENANT_ID: "8ca30751-5f37-4ef5-9e86-fdafb933e926"
   AZURE_SECRET: "<azure-secret>"
@@ -49,7 +49,8 @@ jobs:
     - name: Check artifact
       run: |
         ls -la
-        ls -la .output
+        ls -la /public
+        ls -la /${{ env.OUTPUT_PATH }}
 
     #- name: Azure Login
     #  uses: Azure/login@v1
@@ -74,4 +75,4 @@ jobs:
         azcliversion: latest
         inlineScript: |
           az storage blob delete-batch -s \$web --connection-string "DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net"
-          az storage blob upload-batch -d \$web -s ${{ env.OUTPUT_PATH }} --connection-string "DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net"
+          az storage blob upload-batch -d \$web -s public --connection-string "DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net"
