@@ -57,10 +57,6 @@ jobs:
       uses: azure/CLI@v1
       with:
         azcliversion: latest
-    
-    # az login
-
-    - name: Azure storage
-      run: |
-        az storage blob delete-batch -s "\$web" --connection-string ${{ env.AZURE_STORAGE_CONNECTION_STRING }}
-        az storage blob upload-batch -d "\$web" -s ${{ env.OUTPUT_PATH }} --connection-string ${{ env.AZURE_STORAGE_CONNECTION_STRING }}
+        inlineScript: |
+          az storage blob delete-batch -s "\$web" --connection-string ${{ env.AZURE_STORAGE_CONNECTION_STRING }}
+          az storage blob upload-batch -d "\$web" -s ${{ env.OUTPUT_PATH }} --connection-string ${{ env.AZURE_STORAGE_CONNECTION_STRING }}
