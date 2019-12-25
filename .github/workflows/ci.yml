@@ -8,7 +8,12 @@ on:
 
 # set up env
 env:
-  OUTPUT_PATH: ${{ github.workspace }}/.output
+  OUTPUT_PATH: ${{ github.workspace }}/.output # SOURCE_DIR: "./public"
+  AZURE_CLIENT_ID: "772aba2e-3cd3-49ad-9aba-b957ba645f03"
+  AZURE_TENANT_ID: "8ca30751-5f37-4ef5-9e86-fdafb933e926"
+  AZURE_SECRET: "<azure-secret>"
+  AZURE_SUBSCRIPTION_ID: "192524a8-4e69-487c-8a24-296759903c7f" # az account show --query id
+  AZURE_STORAGE_CONNECTION_STRING: "DefaultEndpointsProtocol=https;AccountName=reviewarchdocsdesign;AccountKey=mqxSOyMYHt+UUparsoMqfQn+jyLcf2C0/bJNFvZ3U/gj4czZjmURvh6+Bp71BayXXBoseyD8UzTUEQhltla0AQ==;EndpointSuffix=core.windows.net"
 
 jobs:
   build:
@@ -48,9 +53,14 @@ jobs:
 
     # deploy
       
-    # - name: Azure CLI script
-    #   uses: azure/CLI@v1
-    #   with:
-    #     azcliversion: latest
-    #     inlineScript: |
-    #       az account show
+    - name: Azure CLI script
+      uses: azure/CLI@v1
+      with:
+        azcliversion: latest
+    
+    # az login
+
+    - name: Azure storage
+      run: |
+        az storage blob delete-batch -s "\$web" --connection-string ${{ env.AZURE_STORAGE_CONNECTION_STRING }}
+        az storage blob upload-batch -d "\$web" -s ${{ env.OUTPUT_PATH }} --connection-string ${{ env.AZURE_STORAGE_CONNECTION_STRING }}
