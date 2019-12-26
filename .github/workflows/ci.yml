@@ -52,7 +52,9 @@ jobs:
       run: |
         ls -la
         ls -la public
-        ls -la docs/.vuepress
+        ls -la public/admin
+        ls -la assets
+        ls -la assets/img
       #  ls -la ${{ env.OUTPUT_PATH }}
         
     - name: Download artifact /public folder
