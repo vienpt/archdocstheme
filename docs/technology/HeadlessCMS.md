@@ -31,20 +31,19 @@ Netlify created a free headless CMS. That use cloud git servies like Github and 
 
 It's free but have an limitation if we want to use that to manage large files like images and videos.
 
-Pros:
+**Pros**:
 
 * Can quickly and easy setting environment (include new or existing project)
 * Working well with Github/Gitlab repositories
 * Can authenticate with OAuth providers: Github, Gitlab, Bitbucket
 * Free host your static site (if not custom domain): <your_site_name>.netlify.com
 
-Cons:
+**Cons**:
 
 * That just require their identity for authenticate (Netlify identity + Git gateway) => It's mean we have to deploy to their site.
 * Using Github/Gitlab
     Netlify auth server just work on `localhost` but anywhere else (`other storage your site`) is confusing. That cannot auth by their auth server. If we want to auth by Github/Gitlab or other auth without Netlify identity > We have to build own authenticate server. (github/gitlab auth APIs or other auth APIs)
 
+## References
 
-## References 
-
-- [3 Free Headless CMS's for Your Next Project](https://www.gatsbyjs.org/blog/2019-10-15-free-headless-cms/)
+* [3 Free Headless CMS's for Your Next Project](https://www.gatsbyjs.org/blog/2019-10-15-free-headless-cms/)
