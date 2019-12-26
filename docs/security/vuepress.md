@@ -76,8 +76,8 @@ Then export default function. You use router to navigation your app before acces
 
 Now start your local dev server with `yarn dev` and view `http://localhost:5000`
 
-![azuread_login](/images/azuread_login.png)
+![azuread_login](../images/azuread_login.png)
 
 after login
 
-![archdocapp](/images/archdocapp.jpg)
+![archdocapp](../images/archdocapp.png)

@@ -33,6 +33,13 @@ jobs:
     - name: Yarn build
       run: yarn docs:build --dest public
 
+    # copy admin folder to root
+
+    - name: Admin CMS
+      run: |
+        mkdir public/admin
+        cp -R docs/.vuepress/admin/* public/admin
+
     # Publish
 
     - name: Publish artifact /public folder
@@ -46,7 +53,6 @@ jobs:
         ls -la
         ls -la public
         ls -la docs/.vuepress
-        ls -la docs/.vuepress/public
       #  ls -la ${{ env.OUTPUT_PATH }}
         
     - name: Download artifact /public folder
