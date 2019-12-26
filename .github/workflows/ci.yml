@@ -38,7 +38,9 @@ jobs:
     - name: Admin CMS
       run: |
         mkdir public/admin
+        mkdir public/images
         cp -R docs/.vuepress/admin/* public/admin
+        cp -R docs/images/* public/images
 
     # Publish
 
@@ -51,10 +53,10 @@ jobs:
     - name: Check artifact
       run: |
         ls -la
+        ls -la docs
         ls -la public
         ls -la public/admin
-        ls -la assets
-        ls -la assets/img
+        ls -la public/images
       #  ls -la ${{ env.OUTPUT_PATH }}
         
     - name: Download artifact /public folder
