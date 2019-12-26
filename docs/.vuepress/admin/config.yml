@@ -3,7 +3,7 @@ backend:
   repo: vienpt/archdocstheme
   branch: master # Branch to update (master by default)
 
-media_folder: "docs/.vuepress/public/images"
+media_folder: "docs/images"
 public_folder: "images"
 
 # This line should *not* be indented
