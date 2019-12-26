@@ -43,3 +43,8 @@ Cons:
 * That just require their identity for authenticate (Netlify identity + Git gateway) => It's mean we have to deploy to their site.
 * Using Github/Gitlab
     Netlify auth server just work on `localhost` but anywhere else (`other storage your site`) is confusing. That cannot auth by their auth server. If we want to auth by Github/Gitlab or other auth without Netlify identity > We have to build own authenticate server. (github/gitlab auth APIs or other auth APIs)
+
+
+## References 
+
+- [3 Free Headless CMS's for Your Next Project](https://www.gatsbyjs.org/blog/2019-10-15-free-headless-cms/)
