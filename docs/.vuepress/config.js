@@ -241,7 +241,8 @@ function genSidebarTechnology() {
       ["/technology/JAMstack/", "JAMStack"],
       ["/technology/Serverless/", "Serverless"],
       ["/technology/SPA/", "Single Page Application"],
-      ["/technology/Vuepress/", "Vuepress"]
+      ["/technology/Vuepress/", "Vuepress"],
+      ["/technology/HeadlessCMS/", "Headless CMS"]
     ]
   }
 }
