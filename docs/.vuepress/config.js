@@ -129,11 +129,11 @@ module.exports = {
    * Config assets，ref：https://vuepress.vuejs.org/plugin/option-api.html#extendmarkdown
    */
   configureWebpack: {
-    // resolve: {
-    //   alias: {
-    //     "@assets": path.resolve(__dirname, "../assets")
-    //   }
-    // }
+    resolve: {
+      alias: {
+        "@images": path.resolve(__dirname, "../images")
+      }
+    }
   },
   /**
    * Apply plugins，ref：https://vuepress.vuejs.org/plugin/#examples
