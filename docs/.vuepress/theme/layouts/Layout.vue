@@ -80,16 +80,6 @@
                 </li>
               </ul>
             </nav>
-            <nav>
-              <ul class="lg:flex items-center justify-between text-base text-black pt-4 lg:pt-0">
-                <li>
-                  <a
-                    class="lg:p-4 py-3 px-0 block hover:border-indigo-400"
-                    href="/admin/"
-                  >Admin</a>
-                </li>
-              </ul>
-            </nav>
             <!-- <a
               href="#"
               class="lg:ml-4 flex items-center justify-start lg:mb-0 mb-4 pointer-cursor"
@@ -229,7 +219,6 @@ export default {
   data: () => ({
     sidebar: false,
   }),
-
   computed: {
     algolia() {
       return this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
@@ -245,6 +234,8 @@ export default {
   },
   mounted() {
     console.log(this.$lang)
+
+    console.log(this.process.env)
   },
   updated() {
     this.closeSidebar()
