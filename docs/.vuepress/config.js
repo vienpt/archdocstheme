@@ -32,8 +32,8 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    base: "docs",
-    dest: process.env.deploy_public,
+    base: "",
+    dest: process.env.deploy_dest,
     lastUpdated: "Last Updated",
     smoothScroll: true,
     search: true,
@@ -129,11 +129,11 @@ module.exports = {
    * Config assets，ref：https://vuepress.vuejs.org/plugin/option-api.html#extendmarkdown
    */
   configureWebpack: {
-    resolve: {
-      alias: {
-        "@images": path.resolve(__dirname, "../images")
-      }
-    }
+    // resolve: {
+    //   alias: {
+    //     "@images": path.resolve(__dirname, "../images")
+    //   }
+    // }
   },
   /**
    * Apply plugins，ref：https://vuepress.vuejs.org/plugin/#examples

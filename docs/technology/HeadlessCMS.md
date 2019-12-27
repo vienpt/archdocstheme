@@ -9,7 +9,7 @@ Use `headless CMS` that can help you build docs site with customize layout, cont
 
 How do you know which headless CMS is right for your docs site? In this post, we’ll walk through important decisions to consider and weigh the pros and cons of three headless CMS options.
 
-![](~@images/headless-cms.png)
+![](/images/headless-cms.png)
 
 ## Defining our headless CMS requirements
 

@@ -11,7 +11,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy_public": "vuepress build docs --dest public"
+    "deploy_dest": "vuepress build docs --dest dest"
   },
   "license": "MIT",
   "devDependencies": {
