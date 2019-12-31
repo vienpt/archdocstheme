@@ -234,8 +234,6 @@ export default {
   },
   mounted() {
     console.log(this.$lang)
-
-    console.log(this.process.env)
   },
   updated() {
     this.closeSidebar()
