@@ -1,6 +1,8 @@
 ---
 title: Vuepress
-description: This tutorial how to authenticate Vuepress by using Azure Active Directory.
+description: >-
+  This tutorial how to authenticate Vuepress by using Azure Active Directory of
+  Microsoft Tech.
 titleBorder: true
 ---
 ### Setting Authentication
